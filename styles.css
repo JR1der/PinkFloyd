@@ -1,0 +1,473 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url("img/darkSideOfTheMoon.jpg");
+  background-position: center;
+  background-position-y: 50px;
+  background-repeat: no-repeat;
+  max-width: 100%;
+
+  margin: 0;
+  padding: 0;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: black;
+}
+
+nav {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  text-align: center;
+  justify-content: space-around;
+  position: fixed;
+  padding: 10px;
+  top: 0px;
+  height: 50px;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(20px);
+
+  border-bottom: 2px solid #f2f2f2;
+}
+
+@media screen and (max-width: 40000px) {
+  .nav .checkbox {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .navLinks {
+    border: black;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  .navLinks {
+    border: none;
+  }
+  .nav .checkbox {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .nav .hamburger-lines {
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .nav .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #f2f2f2;
+  }
+
+  .nav .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .nav .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .nav .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .nav input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+  }
+
+  .nav input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+
+  .nav input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+  }
+}
+
+.link {
+  box-shadow: inset 0 0 0 0 #ffffff;
+  color: #ffffff;
+  height: 2%;
+  border-radius: 4px;
+  width: auto;
+  padding: 0 0.25rem;
+  margin: 0 0.99rem;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.frst:hover {
+  border-radius: 4px;
+  color: #fff;
+  box-shadow: inset 200px 0 0 0 #ff0000;
+}
+
+.scnd:hover {
+  border-radius: 4px;
+  color: #fff;
+  box-shadow: inset 200px 0 0 0 #c0c001;
+}
+
+.thrd:hover {
+  border-radius: 4px;
+  color: #fff;
+  box-shadow: inset 200px 0 0 0 #05add2;
+}
+
+.frth:hover {
+  border-radius: 4px;
+  color: #fff;
+  box-shadow: inset 200px 0 0 0 #e002e0;
+}
+
+.link {
+  margin: 4%;
+  color: #f2f2f2;
+  font-family: "Dela Gothic One", cursive;
+  font-size: 22px;
+  font-weight: bolder;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1020px) {
+  .link {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .link {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 684px) {
+  .link {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .link {
+    display: flex;
+    width: 90px;
+    justify-content: left;
+  }
+  .navBarMenu {
+    transition: 0.7s;
+    padding-top: 20px;
+    position: absolute;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(20px);
+    left: -1000px;
+    width: 100%;
+    border-bottom: 2px solid #f2f2f2;
+    border-right: 2px solid #f2f2f2;
+    top: 0px;
+  }
+  .nav input[type="checkbox"]:checked ~ .navBarMenu {
+    left: 0px;
+    transition: 0.3s;
+  }
+}
+
+ul li {
+  list-style-type: none;
+  display: inline;
+  margin: 1%;
+}
+
+hr {
+  border: 2px solid #f2f2f2;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.AboutUs {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  text-align: center;
+  margin-top: 1000px;
+  margin-bottom: 700px;
+  background-color: black;
+}
+
+@media screen and (max-width: 1200px) {
+  .AboutUs {
+    margin-bottom: 400px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .AboutUs {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .AboutUs {
+    font-size: 10px;
+  }
+}
+
+.aboutHeader {
+  font-family: "Dela Gothic One", cursive;
+  color: #f2f2f2;
+}
+
+.aboutText {
+  color: #f2f2f2;
+  margin-left: 25%;
+  font-family: "Dela Gothic One", cursive;
+  font-family: "Oswald", sans-serif;
+  margin-right: 25%;
+}
+
+@media screen and (max-width: 768px) {
+  .aboutText {
+    font-size: 12px;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  .imagesAbout {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .aboutText {
+    font-size: 8px;
+  }
+}
+
+.logoImg {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .logoImg {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
+
+.imagesAbout {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 50%;
+  border: 6px solid #f2f2f2;
+  border-radius: 2px;
+}
+
+@media screen and (max-width: 768px) {
+  .imagesAbout {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .imagesAbout {
+    border: 4px solid #f2f2f2;
+    border: 2px solid #f2f2f2;
+    border-radius: 2px;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 65%;
+  }
+}
+
+.members {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #f2f2f2;
+  background-color: black;
+  font-size: larger;
+  font-family: "Dela Gothic One", cursive;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+.member {
+  text-align: center;
+  display: block;
+  margin: 2%;
+  width: 30%;
+}
+
+.imgMember {
+  border: 2px solid white;
+  border-radius: 2%;
+  height: 300px;
+  width: 300px;
+}
+@media screen and (max-width: 900px) {
+  .imgMember {
+    height: 250px;
+    width: 250px;
+    border: 1px solid white;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .imgMember {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .member {
+    font-size: 10px;
+  }
+  .imgMember {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .member {
+    font-size: 10px;
+  }
+  .imgMember {
+    height: 70px;
+    width: 70px;
+  }
+}
+
+.cont {
+  color: white;
+  font-size: 16px;
+  font-family: "Dela Gothic One", cursive;
+  text-align: center;
+}
+
+.tableConserts {
+  margin-top: 400px;
+  margin-bottom: 200px;
+  text-align: center;
+  background-color: black;
+  border-top: 2px solid #f2f2f2;
+  border-bottom: 2px solid #f2f2f2;
+  padding: 20px;
+  color: white;
+  font-family: "Dela Gothic One", cursive;
+}
+
+.tableConserts a {
+  text-decoration: none;
+  color: gray;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 70%;
+  text-align: center;
+}
+
+td {
+  vertical-align: top;
+}
+
+#col2 {
+  width: 35%;
+  background-color: black;
+}
+
+#col2,
+#col3 {
+  width: 35%;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  font-family: "Oswald", sans-serif;
+  padding: 5px;
+  font-weight: light;
+  border: 1px solid #f2f2f2;
+  border-radius: 2px;
+}
+
+@media screen and (max-width: 600px) {
+  .tableConserts {
+    font-size: 13px;
+  }
+
+  table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    text-align: center;
+  }
+  #col2,
+  #col3 {
+    font-size: 12px;
+  }
+}
+
+.footerCopyright {
+  border-top: 2px solid white;
+  margin-top: 600px;
+  color: #f2f2f2;
+  font-family: "Dela Gothic One", cursive;
+  font-size: 20px;
+  text-align: center;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(20px);
+  padding: 20px;
+}
+
+@media  screen and (max-width: 610px){
+  .footerCopyright {
+    font-size:14px;
+  }
+}
+
+.pinkSong {
+  width: 50%;
+}
+
+.videoPink {
+  border: 2px solid white;
+  border-radius: 2px;
+  width: 70%;
+  margin-bottom: 5%;
+}
+
+@media screen and (max-width: 610px){
+  .videoPink {
+    width: 80%;
+  }
+}
